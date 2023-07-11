@@ -1,0 +1,23 @@
+
+<div class="card text-bg-dark" style="max-width: 350px;">
+
+    <div class="row g-0">
+        <div class="col-md-5">
+            <img class="img-fluid rounded float-start" [src]="card.imageUrl" [alt]="card.name" width="100%">
+        </div>
+        <div class="col-md-5">
+            <div class="card-body">
+                <h5 class="card-title">{{card.name}}</h5>
+                <p class="card-text" [ngClass]="cardClasses">{{card.price | currency:"EUR"}}</p>
+                <p class="card-text">In stock: <span [ngStyle]="cardStyles">{{card.quantity}}</span></p>
+                <div>
+                    <button class="btn btn-primary card-item__btn" (click)="decreaseQuantity()" [disabled]="amount == 0">-</button>
+                    <span>{{amount}}</span>
+                    <button class="btn btn-primary card-item__btn" (click)="increaseQuantity()" [disabled]="amount >= card.quantity">+</button>
+                </div>
+                <button class="btn btn-danger" (click)="addToCart()" [disabled]="amount == 0">Add to cart</button>
+            </div>
+        </div>
+    </div>
+
+</div>

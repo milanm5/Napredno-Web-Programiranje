@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <div class="alert alert-warning alert-dismissible fade show" *ngIf="message !== null" role="alert">
+            {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          </div>
+          <h1 class="text-center text-light mt-5 mb-2">Tapped out <img src="../../assets/icons/tap-logo.png" alt="Logo" width="35" height="25" class=""></h1>
+          <h2 class="text-center text-light mb-2">A Magic The Gathering Online Marketplace for Trading Cards</h2>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div id="carouselExample" class="carousel slide align-center" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../../assets/sets/tales-of-middle-earth.jpg" class="d-block w-100" alt="Tales of Middle Earth" width="200" height="400">
+              </div>
+              <div class="carousel-item">
+                <img src="../../assets/sets/march-of-the-machines.jpg" class="d-block w-100" alt="March of The Machines" width="200" height="400">
+              </div>
+              <div class="carousel-item">
+                <img src="../../assets/sets/phyrexia-all-will-be-one.png" class="d-block w-100" alt="Phyrexia All Will Be One" width="200" height="400">
+              </div>
+              <div class="carousel-item">
+                <img src="../../assets/sets/the-brothers-war.jpg" class="d-block w-100" alt="The Brothers War" width="200" height="400">
+              </div>
+              <div class="carousel-item">
+                <img src="../../assets/sets/kamigawa-neon-dynasty.jpg" class="d-block w-100" alt="Kamigawa Neon Dynasty" width="200" height="400">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+</div>

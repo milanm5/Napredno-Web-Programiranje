@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row justify-content-center ">
+        <div class="col-4">
+            <div class="card text-bg-dark mt-5">
+                <h4 class="card-header">Login</h4>
+                <div class="card-body">
+                    <div class="alert alert-danger alert-dismissible fade show" *ngIf="message !== null" role="alert">
+                        {{message}}
+                    </div>
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
+                        <div class="mb-3">
+                            <label for="usernameInput" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="usernameInput" formControlName="username">
+                            <div *ngIf="!loginForm.get('username')?.valid && loginForm.get('username')?.touched" class="form-text text-warning">
+                                Username is required!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" formControlName="password">
+                            <div *ngIf="!loginForm.get('password')?.valid && loginForm.get('password')?.touched" class="form-text text-warning">
+                                Password is required!
+                            </div>
+                        </div>
+
+                        <button class="btn btn-danger me-md-2" type="submit">Login</button>
+                        <a class="link-warning" routerLink="/register">Register</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+.bg-image {
+    background-image: url("../assets/2288809.jpg"); 
+    height: 100rem;
+}
+
+.links a.active {
+    background-color: grey;
+}
